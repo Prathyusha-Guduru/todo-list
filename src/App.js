@@ -10,7 +10,7 @@ function App() {
   return (
     <div><h1>Hello React</h1>
     <Form setInputText = {setInputText} todos = {todos} setTodos = {setTodos} inputText = {inputText}/>
-    <TodoList/></div>
+    <TodoList todos = {todos}/></div>
     
   );   
 }
