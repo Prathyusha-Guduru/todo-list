@@ -1,5 +1,7 @@
 import React,{useState,useEffect} from "react";
 import "./App.css";
+import "./css/styles.min.css";
+import todoImage from "./todo-image.png"
 import Form from "./components/Form";
 import TodoList from "./components/TodoList";
 
@@ -28,9 +30,16 @@ function App() {
     }
   }
   return (
-    <div><h1>Hello React</h1>
-    <Form setInputText = {setInputText} todos = {todos} setTodos = {setTodos} inputText = {inputText} status = {status} setStatus = {setStatus} />
-    <TodoList todos = {todos} setTodos = {setTodos} filterTodos = {filterTodos}/></div>
+    <div className = "container">
+      <div className="content-wrapper">
+      <Form setInputText = {setInputText} todos = {todos} setTodos = {setTodos} inputText = {inputText} status = {status} setStatus = {setStatus} />
+      <TodoList todos = {todos} setTodos = {setTodos} filterTodos = {filterTodos}/>
+      </div>
+      <div className="image-wrapper">
+        <img className = "todo-image" src={todoImage} alt="image" />
+      </div>
+    
+    </div>
     
   );   
 }
