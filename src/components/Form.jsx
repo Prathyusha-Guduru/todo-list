@@ -16,21 +16,21 @@ const Form = ({setInputText,todos,setTodos,inputText,setStatus,status}) =>{
 	}
 
 	const statusHandler = (e) =>{
-		setStatus(e.target.value	)
+		setStatus(e.target.value)
 	}
 	return(
 		<form>
 		<input value = {inputText} onChange = {inputTextHandler} type="text" className="todo-input" />
 		<button onClick = {submitTodoHandler}  className="todo-button" type="submit">
-		  <i className="fas fa-plus-square"></i>
+		<i class="fas fa-plus"></i>
 		</button>
-		<div className="select">
+		{/* <div className="select">
 		  <select name="todos" className="filter-todo" onChange = {statusHandler}>
 			<option value="all">All</option>
 			<option value="completed">Completed</option>
 			<option value="uncompleted">Uncompleted</option>
 		  </select>
-		</div>
+		</div> */}
 	  </form>
 	);
 }

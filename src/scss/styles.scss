@@ -4,10 +4,19 @@
 	padding: 0;
 }
 
+$box-color : rgba(239, 235, 237, 1);
+$orange-color :  rgba(216, 96, 73, 1);
+
+
 @mixin flexCenter {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+@mixin curvedBorders{
+	border-radius: 10px;
+	border: 0;
 }
 
 
@@ -39,9 +48,41 @@ body{
 
 .content-wrapper{
 	width: 40%;
+	// background-color: lightcoral;
+	height: 90%;
+	
 }
 
 .image-wrapper{
 	width: 40%;
 	@include flexCenter();
+}
+
+
+form{
+	
+	width: 90%;
+	@include flexCenter();
+	justify-content: space-between;
+}
+
+.todo-input{
+	
+	width: 80%;
+	min-height: 70px;
+	background-color: $box-color;
+	margin: 0 30px 0 0 ;
+	@include curvedBorders();
+}
+
+.todo-button{
+	min-height: 70px;	
+	width: 15%;
+	@include curvedBorders();
+	background-color: $orange-color;
+	i{
+		font-size: 15px;
+		color: $box-color;
+	}
+	cursor: pointer;
 }
