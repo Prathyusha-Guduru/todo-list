@@ -21,6 +21,17 @@ $dark-gray  : rgba(0, 0, 0, 0.7);
 	border: 0;
 }
 
+@mixin purple-shadow{
+	box-shadow: 10px 10px 20px rgba(204,180,255,0.4);
+}
+
+@mixin purple-shadow-subtle{
+	box-shadow: 5px 5px 20px rgba(204,180,255,0.3);
+}
+
+@mixin orange-shadow{
+	box-shadow: 20px 20px 20px rgba(216, 96, 73, 0.2);
+}
 
 body{
 	background-color: rgba(204,180,255,0.5);
@@ -34,6 +45,9 @@ body{
 }
 
 .todo-image{
+	position: fixed;
+	// top: 0px;
+	// left: 0px;
 	filter: drop-shadow(40px 40px 80px #CCB4FF);
 }
 
@@ -44,7 +58,7 @@ body{
 }
 
 .container{
-	width: 90%;
+	width: 80%;
 	height: 80%;
 	@include flexCenter();
 	justify-content: space-between;
@@ -59,6 +73,8 @@ body{
 .image-wrapper{
 	width: 40%;
 	@include flexCenter();
+	background-color: lightcoral;
+	// transform: translate(100%,50%);
 }
 
 
@@ -71,7 +87,7 @@ form{
 
 .todo-input{
 	color: $dark-gray;
-
+	@include purple-shadow();
 	font-family: 'Lexend Mega', sans-serif;
 	padding: 0 10px;
 	font-size: 18px;
@@ -93,6 +109,7 @@ form{
 		color: $box-color;
 	}
 	cursor: pointer;
+	@include orange-shadow();
 }
 
 .todo-container{
@@ -107,6 +124,7 @@ form{
 }
 
 .todo{
+	@include purple-shadow();
 	background-color: $box-color;
 	@include curvedBorders();
 	min-height: 50px;
@@ -117,8 +135,11 @@ form{
 }
 
 .todo-item{
+	@include flexCenter();
+	justify-content: flex-start;
 	max-width: 80%;
-	
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .item-buttons{
@@ -135,6 +156,7 @@ form{
 	cursor: pointer;
 	color: $orange-color;
 	font-size: 15px;
+	margin: 5px;
 }
 
 
@@ -146,4 +168,26 @@ form{
 		text-decoration: line-through;
 		opacity: 0.5;
 	}
+}
+
+@media screen and (max-width : 900px){
+
+	
+	.image-wrapper{
+		display: none;
+	}
+	.content-wrapper{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width : 500px){
+	.container{
+		width: 90%;
+		height: 100%;
+		padding: 20px 0;
+	}
+
+	
+
 }
