@@ -73,6 +73,7 @@ form{
 	background-color: $box-color;
 	margin: 0 30px 0 0 ;
 	@include curvedBorders();
+	outline: none;
 }
 
 .todo-button{
@@ -85,4 +86,45 @@ form{
 		color: $box-color;
 	}
 	cursor: pointer;
+}
+
+.todo-container{
+	
+	margin: 40px 0;
+}
+
+.todo-list{
+	
+	width: 90%;
+	list-style: none;
+}
+
+.todo{
+	background-color: $box-color;
+	@include curvedBorders();
+	min-height: 50px;
+	margin: 20px 0;
+	@include flexCenter();
+	justify-content: space-between;
+	padding: 0 10px;
+}
+
+.todo-item{
+	max-width: 80%;
+	
+}
+
+.item-buttons{
+	
+	min-width: 10%;	
+	@include flexCenter();
+	justify-content: space-between;
+}
+
+.complete-btn, .trash-btn{
+	background-color: transparent;
+	border: 0;
+	outline: none;
+	cursor: pointer;
+	color: $orange-color;
 }
