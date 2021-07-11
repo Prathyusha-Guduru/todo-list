@@ -6,6 +6,8 @@
 
 $box-color : rgba(239, 235, 237, 1);
 $orange-color :  rgba(216, 96, 73, 1);
+$dark-gray  : rgba(0, 0, 0, 0.7);
+
 
 
 @mixin flexCenter {
@@ -27,6 +29,8 @@ body{
 	overflow-x: hidden;
 	overflow-y: scroll;
 	@include flexCenter();
+	font-family: 'Lexend Mega', sans-serif;
+	color: $dark-gray;
 }
 
 .todo-image{
@@ -48,7 +52,6 @@ body{
 
 .content-wrapper{
 	width: 40%;
-	// background-color: lightcoral;
 	height: 90%;
 	
 }
@@ -67,7 +70,11 @@ form{
 }
 
 .todo-input{
-	
+	color: $dark-gray;
+
+	font-family: 'Lexend Mega', sans-serif;
+	padding: 0 10px;
+	font-size: 18px;
 	width: 80%;
 	min-height: 70px;
 	background-color: $box-color;
@@ -106,7 +113,7 @@ form{
 	margin: 20px 0;
 	@include flexCenter();
 	justify-content: space-between;
-	padding: 0 10px;
+	padding: 10px 10px 10px 15px;
 }
 
 .todo-item{
@@ -127,4 +134,16 @@ form{
 	outline: none;
 	cursor: pointer;
 	color: $orange-color;
+	font-size: 15px;
+}
+
+
+.item-complete{
+	.complete-btn, {
+		color : rgba(240, 80, 83, 0.5);
+	}
+	.completed{
+		text-decoration: line-through;
+		opacity: 0.5;
+	}
 }

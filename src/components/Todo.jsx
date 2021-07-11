@@ -19,7 +19,7 @@ const Todo = ({text,setTodos,todo,todos}) =>{
 		})
 		)}
 	return (
-		<div className="todo">
+		<div className={`todo ${todo.completed ? "item-complete" : " "}`}>
 			<li className= {`todo-item ${todo.completed ? "completed" : " "}`} > {text}</li>
 			<div className="item-buttons">
 			<button  onClick = {completeHandler} className = "complete-btn">
