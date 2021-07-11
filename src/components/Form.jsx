@@ -13,6 +13,7 @@ const Form = ({setInputText,todos,setTodos,inputText,setStatus,status}) =>{
 			...todos,
 			{text : inputText,completed : false,id : Math.random()*1000}
 		])
+		localStorage.setItem('todos',JSON.stringify(todos))
 		setInputText(" ");	
 	}
 

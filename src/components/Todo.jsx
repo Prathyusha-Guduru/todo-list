@@ -3,7 +3,7 @@ import React from 'react';
 const Todo = ({text,setTodos,todo,todos}) =>{
 	const deleteHandler=()=>{
 		setTodos(todos.filter(el => el.id !== todo.id))
-		
+		// localStorage.setItem('todos',JSON.stringify(todos))
 		
 	}
 	const completeHandler = () =>{
@@ -15,6 +15,7 @@ const Todo = ({text,setTodos,todo,todos}) =>{
 					...item,completed : !item.completed
 				}
 			}
+			// localStorage.setItem('todos',JSON.stringify(todos))
 			return item;
 		})
 		)}

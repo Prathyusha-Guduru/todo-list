@@ -11,7 +11,11 @@ function App() {
   const [todos,setTodos] = useState([])
   const [status, setStatus] = useState('all')
   const [filterTodos,setFilterTodos] = useState([])
-
+  // localStorage.setItem('todos',JSON.stringify(todos))
+  // if (localStorage.getItem('todos') !== null) {
+  //   todos += JSON.parse(localStorage.getItem('todos'));
+  // }
+  
 
   useEffect(()=>{
     filterHandler();
